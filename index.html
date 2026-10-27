@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="رغد العتيبي - أخصائية تسويق وصانعة محتوى">
 <meta property="og:title" content="رغد العتيبي - أخصائية تسويق">
-<meta property="og:description" content="من سعيٍ إلى إنجاز، ومن تجربةٍ إلى امتياز">
+<meta property="og:description" content="من سعيٍ إلى إنجاز، ومن فكرةٍ إلى واقع">
 </head>
 <body>
 <title>رغد العتيبي</title>
@@ -233,18 +233,41 @@ section{scroll-margin-top:110px;padding-block:var(--sec) 0}
 .rb-lede{margin:0 auto;max-width:56ch;color:var(--mute);line-height:1.9}
 .rb-hero{background:var(--card);border-radius:20px;box-shadow:var(--shadow);padding:clamp(20px,4vw,34px);display:grid;gap:6px;justify-items:center}
 .rb-hero .kn{font-size:clamp(3rem,11vw,5.2rem);font-weight:600;line-height:1;direction:ltr;font-variant-numeric:tabular-nums;background:linear-gradient(90deg,var(--orange),var(--primary));-webkit-background-clip:text;background-clip:text;color:transparent}
+.rb-k{font-size:.95rem;font-weight:600;color:var(--accent);letter-spacing:.2px}
 .rb-hero > span{color:var(--mute);font-size:.95rem}
 .rb-split{display:flex;width:min(100%,520px);height:12px;border-radius:999px;overflow:hidden;background:var(--paper-2);margin-top:14px;direction:ltr}
 .rb-split i{display:block;width:var(--w);height:100%}
 .rb-split i + i{min-width:8px}
 .pi-tiktok{background:var(--primary)}.pi-x{background:var(--orange)}
 .rb-legend{display:flex;gap:16px;font-size:.8rem;color:var(--mute)}.rb-legend span{display:flex;align-items:center;gap:6px}.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
-.rb-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rb-kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:560px;margin-inline:auto;width:100%}
 .kpi{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:16px 12px;display:grid;justify-items:center;gap:2px}
 .kpi .pi{margin-bottom:6px;color:#fff}.pi-soft{background:var(--paper-2)!important;color:var(--accent)!important}
 .kpi .kn{font-size:clamp(1.4rem,3.4vw,1.9rem);font-weight:600;direction:ltr;font-variant-numeric:tabular-nums;line-height:1.2}
 .kpi .kl{font-size:.88rem}.kpi small{font-size:.72rem;color:var(--mute)}
 @media(max-width:700px){.rb-kpis{grid-template-columns:1fr 1fr;gap:10px}}
+
+/* ---------- وللحكاية شهود ---------- */
+.wit-sec{padding-block:var(--sec) 0;text-align:center}
+.wit-grid{columns:3 280px;column-gap:18px;margin-top:var(--head-gap);text-align:start}
+.wit{break-inside:avoid;margin:0 0 18px;background:var(--card);border-radius:18px;box-shadow:var(--shadow);padding:20px 20px 16px;position:relative;display:grid;gap:10px;border:1px solid var(--line)}
+.wit:nth-child(3n+2){background:color-mix(in srgb,var(--lilac) 22%,var(--card))}
+.wit:nth-child(3n){background:color-mix(in srgb,var(--orange) 12%,var(--card))}
+.wit-q{position:absolute;top:10px;inset-inline-end:16px;font-size:3.2rem;line-height:1;color:var(--accent);opacity:.18;font-family:Georgia,serif}
+.wit-grid:not(.all) .wit:nth-child(n+10){display:none}
+.wit-all{margin-top:6px;border:1px solid var(--line);background:var(--card);color:var(--accent);font:inherit;font-weight:600;border-radius:999px;padding:9px 22px;cursor:pointer;box-shadow:var(--shadow)}
+.wit-tag{justify-self:start;font-size:.74rem;font-weight:600;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);border-radius:999px;padding:2px 10px}
+.wit p{margin:0;font-size:.95rem;line-height:1.95;color:var(--ink)}
+.wit-t{display:grid;gap:8px}
+.wit-t p{background:color-mix(in srgb,var(--paper-2) 70%,transparent);border-radius:14px 14px 4px 14px;padding:8px 12px;justify-self:start;max-width:100%}
+.wit.open .wit-t{max-height:none}
+.wit-more{justify-self:start;border:0;background:none;padding:0;color:var(--accent);font:inherit;font-weight:600;font-size:.85rem;cursor:pointer}
+.wit-blur{display:inline-block;width:5.5em;height:1em;vertical-align:-2px;border-radius:6px;background:linear-gradient(90deg,color-mix(in srgb,var(--ink) 35%,transparent),color-mix(in srgb,var(--ink) 20%,transparent));filter:blur(3px)}
+@media(max-width:700px){
+  .wit-grid{columns:auto;display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+  .wit-grid:not(.all) .wit:nth-child(n+10){display:grid}.wit-all{display:none}
+  .wit{flex:0 0 84%;scroll-snap-align:center;margin:0;align-content:start}
+}
 
 /* ---------- أعمال محظورة ---------- */
 .lock-sec{text-align:center}
@@ -514,6 +537,10 @@ main section,.vault-body{text-align:center}
 .rep-cover.is-tall{aspect-ratio:4/5}.rep-cover.is-tall img{object-position:top}
 .rep-cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
 .rep-cover:hover img{transform:scale(1.03)}
+.is-locked .rep-cover{cursor:default}.is-locked .rep-cover img{filter:blur(3px) saturate(.8);transform:scale(1.04)}.is-locked .rep-cover:hover img{transform:scale(1.04)}
+.rep-lock{position:absolute;inset:0;margin:auto;width:58px;height:58px;border-radius:50%;background:rgba(92,68,108,.88);color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.25)}.rep-lock svg{width:26px;height:26px}
+.rep-closed{margin-top:auto;padding-top:6px;font-size:.85rem;font-weight:600;color:var(--mute)}
+.is-locked .rep-cover{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}.is-locked img{pointer-events:none}
 .rep-n{position:absolute;bottom:10px;inset-inline-start:10px;background:rgba(20,15,25,.7);color:#fff;font-size:.75rem;border-radius:999px;padding:2px 10px}
 .rep-b{padding:12px 16px 16px;display:grid;gap:4px;flex:1}
 .rep-c{font-size:.75rem;color:var(--accent);font-weight:600}
@@ -699,7 +726,7 @@ main section,.vault-body{text-align:center}
 <!-- عن رغد -->
 <section id="about">
   <div class="wrap">
-    <h2 class="h2 st-head">من سعيٍ إلى إنجاز، ومن تجربةٍ إلى امتياز… هنا تُروى محطّاتي</h2>
+    <h2 class="h2 st-head">من سعيٍ إلى إنجاز، ومن فكرةٍ إلى واقع… هنا تُروى محطّاتي</h2>
     <div class="about-grid">
       <div class="route" id="route">
         <div class="road" aria-hidden="true"><div class="road-fill"></div></div>
@@ -776,6 +803,15 @@ main section,.vault-body{text-align:center}
   </div>
 </section>
 
+<!-- وللحكاية شهود -->
+<section class="wit-sec" id="witnesses" aria-labelledby="witTitle">
+  <div class="wrap">
+    <h2 class="h2" id="witTitle">وللحكاية شهود</h2>
+  </div>
+  <div class="wrap wit-grid" id="witGrid"></div>
+  <div class="wrap"><button class="wit-all" id="witAll" type="button">شهادات أكثر</button></div>
+</section>
+
 <!-- التواصل -->
 <section id="contact" class="contact">
   <div class="wrap">
@@ -813,7 +849,7 @@ main section,.vault-body{text-align:center}
    ========================================================================= */
 const RG = {
   // الوصول = 49,923,956 (تيك توك) + 4,000,000 (إكس) = 53,923,956
-  stats: [ ["+6","سنوات خبرة"], ["+200","مشروع"], ["+53M","وصول"], ["+50","متدربًا"], ["∞","أفكار لا تنتهي"] ],
+  stats: [ ["+6","سنوات خبرة"], ["+200","مشروع"], ["spin","مشاهدات يصعب حصرها"], ["+50","متدرب"], ["∞","أفكار لا تنتهي"] ],
 
   // أسماء الجهات؛ لما توصلني الشعارات أضيف src لكل وحدة
   // الشعارات مقصوصة من فيديو الموقع، وتنعرض بلون واحد من الهوية
@@ -829,6 +865,7 @@ const RG = {
     { name:"جمعية أصدقاء", src:"logos-asdeqa.jpg" },
     { name:"علامة محجوبة", src:"logos-sealed-3.jpg", sealed:true },
     { name:"نقش للاستثمار", src:"logos-naqsh.jpg" },
+    { name:"أكاديمية تكامل", src:"logos-takamol.jpg" },
     { name:"رواية", src:"logos-rewaya.jpg" },
     { name:"علامة محجوبة", src:"logos-sealed-4.jpg", sealed:true },
     { name:"علامة شريكة", src:"logos-dots.jpg" },
@@ -926,12 +963,12 @@ const RG = {
         {"kind": "reel", "video": "videos-v14.mp4", "poster": "videos-p14.jpg", "title": "التقويم التسويقي"}
       ] } },
     { name:"التقارير",       count:3,  icon:"file",   platforms:["إنستقرام"], items:[],
-      note:"تقارير شهرية أعددتها لحساب صفقات: أقيس فيها الوصول والتفاعل، وأحدد أفضل المحتوى أداءً، وأتابع نتائج حملات المؤثرين",
+      note:"تقارير شهرية أعددتها لحساب على إنستقرام: أقيس فيها الوصول والتفاعل، وأحدد أفضل المحتوى أداءً، وأتابع نتائج حملات المؤثرين",
       process:["جمع البيانات","التحليل","أفضل المحتوى","النتائج والتوصيات"],
       byPlatform:{ "إنستقرام":[
-        {"kind": "report", "title": "التقرير الشهري الأول", "client": "صفقات · إنستقرام", "desc": "الوصول والتفاعل، ونمو المتابعين، وأفضل البوستات أداءً", "pages": ["reports-may01.jpg", "reports-may02.jpg", "reports-may03.jpg", "reports-may04.jpg", "reports-may05.jpg", "reports-may06.jpg", "reports-may07.jpg", "reports-may08.jpg", "reports-may09.jpg"]},
-        {"kind": "report", "title": "التقرير الشهري الثاني", "client": "صفقات · إنستقرام", "desc": "الوصول والتفاعل، وأفضل البوستات والريلز والستوري", "pages": ["reports-jun01.jpg", "reports-jun02.jpg", "reports-jun03.jpg", "reports-jun04.jpg", "reports-jun05.jpg", "reports-jun06.jpg", "reports-jun07.jpg", "reports-jun08.jpg", "reports-jun09.jpg", "reports-jun10.jpg", "reports-jun11.jpg", "reports-jun12.jpg", "reports-jun13.jpg"]},
-        {"kind": "report", "title": "التقرير الشهري الثالث", "client": "صفقات · إنستقرام", "desc": "الأداء الشهري، وأفضل المحتوى، ونتائج حملة ٩ مؤثرين", "pages": ["reports-sep01.jpg", "reports-sep02.jpg", "reports-sep03.jpg", "reports-sep04.jpg", "reports-sep05.jpg", "reports-sep06.jpg", "reports-sep07.jpg", "reports-sep08.jpg", "reports-sep09.jpg", "reports-sep10.jpg", "reports-sep11.jpg", "reports-sep12.jpg", "reports-sep13.jpg", "reports-sep14.jpg", "reports-sep15.jpg", "reports-sep16.jpg"]}
+        {"kind": "report", "title": "التقرير الشهري الأول", "client": "إنستقرام", "desc": "الوصول والتفاعل، ونمو المتابعين، وأفضل البوستات أداءً", "locked": true, "pages": ["reports-may01.jpg"]},
+        {"kind": "report", "title": "التقرير الشهري الثاني", "client": "إنستقرام", "desc": "الوصول والتفاعل، وأفضل البوستات والريلز والستوري", "locked": true, "pages": ["reports-jun01.jpg"]},
+        {"kind": "report", "title": "التقرير الشهري الثالث", "client": "إنستقرام", "desc": "الأداء الشهري، وأفضل المحتوى، ونتائج حملة ٩ مؤثرين", "locked": true, "pages": ["reports-sep01.jpg"]}
       ] } },
     { name:"أفكار إبداعية",  count:1,  icon:"bulb",   platforms:["الملفات"], items:[],
       note:"هنا بعض أفكاري الإبداعية التي تحوّلت إلى ملفات نُفّذت على أرض الواقع، لا منشورات على السوشل ميديا، وبعضها ما زال مستمرًا حتى اليوم؛ فالأفكار عندي لا تنتهي",
@@ -943,12 +980,11 @@ const RG = {
       ] } },
     { name:"حملات مؤثرين",   count:2,  icon:"mega",   platforms:["تيك توك","إكس"], items:[],
       byPlatform:{
-        "تيك توك":[{ kind:"camp", plat:"tiktok", title:"حملة مؤثرين لشركة صفقات", period:"تيك توك · قرابة سنة من العمل المستمر",
-          big:49923956, bigLabel:"مشاهدة",
-          metrics:[["المشاهدات",49923956],["الإعجابات",499240],["التعليقات",13979]],
+        "تيك توك":[{ kind:"camp", plat:"tiktok", title:"حملة مؤثرين على مدار سنة", period:"تيك توك · قرابة سنة من العمل المستمر",
+          big:"spin", bigLabel:"مشاهدة",
+          metrics:[],
           roles:["اختيار المؤثرين المناسبين والتنسيق معهم","اختيار المنتجات المناسبة لكل مؤثر","الفكرة وكتابة المحتوى الإعلاني","متابعة النشر والنتائج"],
-          note:"المشاهدات مجموع مرات المشاهدة، وليست عدد أشخاص مختلفين",
-          clips:[ { video:"videos-c01.mp4", poster:"videos-cp01.jpg", title:"تجهيز عيديات عيد الحج" }, { video:"videos-c02.mp4", poster:"videos-cp02.jpg", title:"ترند التشيز المقلوب" }, { video:"videos-c03.mp4", poster:"videos-cp03.jpg", title:"جمعة الصديقات" }, { video:"videos-c04.mp4", poster:"videos-cp04.jpg", title:"قهوة الاثنين مع الجيران" }, { video:"videos-c05.mp4", poster:"videos-cp05.jpg", title:"حلا البوكسات" }, { video:"videos-c06.mp4", poster:"videos-cp06.jpg", title:"بجهّز فطور زوجي قبل الدوام" }, { video:"videos-c07.mp4", poster:"videos-cp07.jpg", title:"بجهّز لجمعة العصرية عند أهلي" } ] }],
+          note:"الرقم يتجاوز حدود الإفصاح" }],
         "إكس":[{ kind:"camp", plat:"x", sealed:true, title:"حملة حلقات بودكاست", hint:"إكس · اسم البودكاست محجوب", desc:"حملة تسويقية لبودكاست معروف، شملت اختيار المؤثرين المناسبين، وابتكار الفكرة الإعلانية، وكتابة المحتوى، ومتابعة النشر لضمان تنفيذ الحملة وفق الأهداف المحددة",
           big:4000000, bigLabel:"وصول",
           metrics:[["الوصول",4000000]],
@@ -961,11 +997,9 @@ const RG = {
   // نتائج الحملات مجتمعة في الصفحة الرئيسية، والتفاصيل داخل مجلد «حملات مؤثرين»
   results: {
     text:"تولّيت إدارة تفاصيل الحملتين، بدءًا من الفكرة واختيار المؤثرين، مرورًا بكتابة المحتوى ومتابعة التنفيذ، وصولًا إلى رصد النتائج وتحليلها",
-    total:53923956, totalLabel:"إجمالي المشاهدات والوصول",
-    kpis:[ { plat:"tiktok", v:49923956, label:"مشاهدة", sub:"تيك توك" },
-           { plat:"x", v:4000000, label:"وصول", sub:"إكس" },
-           { icon:"like", v:499240, label:"إعجاب", sub:"تيك توك" },
-           { icon:"comment", v:13979, label:"تعليق", sub:"تيك توك" } ]
+    total:"spin", totalLabel:"عداد لا يعرف التوقف",
+    kpis:[ { plat:"tiktok", v:"spin", label:"مشاهدات", sub:"تيك توك" },
+           { plat:"x", v:4000000, label:"وصول", sub:"إكس" } ]
   },
 
   sealed: [
@@ -998,6 +1032,9 @@ const RG = {
       icon:"in", preview:"sealed-linkedin-plan.jpg", previewCap:"لمحة من أحد المنشورات، مشوّشة عمدًا",
       why:"غير مصرّح بالنشر" }
   ],
+
+  // وللحكاية شهود: آراء من عملاء ومتابعين ({{BLUR}} = جزء مشوّش، النص الأصلي ما ينكتب)
+  witnesses: [{"tag": "عن الملف", "text": "والله أبهرتيني ومبسوطه لك\nعند كل صفحة أقول ماشاء الله عليها، صدق محتوى يبرد الخاطر.. دليل شامل قول وفعل ❤️‍🔥\nالله يوفقك ويرزقك الخير الوفير وأنتِ بصحة وعافية، وشكرًا لأنه من أمتع وأنفع الهدايا والله ماقصرتي 🥹❤️"}, {"tag": "عن التعامل", "text": "يعطيك العافية ما قصرتي، شغل جميل ومرتب وتعامل راقي وخدمة عملاء فنانه\nشكراً لك ولفريقك المبدع، الله يبارك لك في رزقك ويرزقك من واسع فضله وتوصلي وتحققي جميع أهدافك 🌼🤝\nوأكيد ماراح يكون أخر تعامل بيننا 🌼"}, {"tag": "عن التصوير", "text": "حياك الله رغد، جودة التصوير وشغل الفيديوهات ممتازه جدا، بالإضافة لجودة الـ voiceover\nالتعامل معكم مريح من ناحية التعديلات، كل الشكر لك ولفريقك"}, {"tag": "عن الكتاب", "text": "قرأت الكتاب من أول يوم ما يقارب ثلاث مرات، لغزارة المعرفة فيه والمعلومات الأساسية التي يمكن أن ينتهجها من يبدأ في إدارة الحسابات، والتسويق الرقمي أيضًا\nكانت اللغة ودية وسهلة حتى شعرت (أننا على الدكة نشرب شاي سوا)، والأجمل تنسيقك للمعلومة بالترتيب حتى يصل القارئ لغايته ومقصده الأول\nلن تفي الكلمات مدى الحب والإعجاب بكِ ولكِ على الكتاب وأمانتك في الطرح والتقديم، بوركتِ يا رغد ❤️"}, {"tag": "عن الأسلوب", "text": "والله اني أعرف إنك ماتحطين الا الجميل النادر\nمو لأني عرفتك هنا، انا متابعتك من قبل التحدي ذا، حتى تغريداتك عن المواضيع وافيه وكافيه دايم\nأسلوبك مختلف وطريقة تفكيرك نادره تبارك الرحمن، وسبق وأشدت بك عند صحباتي أن شوفوا حساب رغد، حتى الملفات اللي تسويها تفتح النفس وتحمس اللي يشوفها ماهي مملة ومتزاحمه"}, {"tag": "عن المحتوى", "text": "والمحتوى دايما اعلاناتك جميلة بسبب المحتوى اللي تجهزيه لنا 🙏🏼"}, {"tag": "عن الملف", "text": "اهلا رغد مساء الخير 🤍\nانا توني شريت الملف حق بكج إدارة الحسابات، مشاءالله تبارك الله الملف متكامل ورائع 👍🏻"}, {"tag": "عن التسويق", "text": "فيه وحده تصور وتسوق لمنتجات {{BLUR}} ومدحتك عندها، قلت شاطره مره بالتسويق والتعامل مع المشاهير\nوحابه تتواصل معك"}, {"tag": "عن المنتج", "text": "اهلاً رغد\nحبيت اقولك الف شكر والله للمنتج الرهيب اللي فك لي ازمة الحوسه ومعلومات تلخبط الواحد ❤️❤️❤️\nشكراً لمجهودك"}, {"tag": "عن الملف", "text": "يجنننننن الملفففف يفتحح النفسسس\nالله يعطيييك العافييية يارب، ما ندمت اني شريته ابدا 🤍🤍🤍"}, {"tag": "عن التصميم", "text": "الجوكّر وين ما تكونين تبدعيييين ❤️\nماشاءالله والله رهيب التصميم، وحسيت في لمسه حنونه يمكن من الجلسه الحمراء 😂"}, {"tag": "عن الإلهام", "text": "قسم بالله الفخر 💜\nتطورك يوم عن يوم وانجازاتك مُبهرره، انتي فوق م انك تعطين بحُب وتصنعين اشياء تفيد الناس وبشكل احترافي، ياخي مُلهمه\nتلهمين غيرك انه يبدا، انه يحاول، وتلهمينه انه صدق مافيه شي مستحيل 🥹\nالله يسعدك ويوفقك ويجعل كل خطوه تخطينها بالمجال هذا وغيره بركه وتوفيق لك، وعقبال م نشوف اسمك باعلى الاماكن اللي تتمنينها 💜"}, {"tag": "عن الملف", "text": "حبيت حبيت مرة، شكرًا والله الجهد المبذول واضح وعصارة الخبرة بارزة لدرجة لو كان هذا الملف موجود ببداياتي لاختصر علي كثير اخطاء وخلاني اركز أكثر في أهدافي وحقق نتايج أفضل بدون تشتيت\nاحلا شيء فيه أنه مركز بنقاط رئيسية نغفل عنها كثير مع حوسة إدارة الحسابات، حاليًا اقدر اقول راجعه بقوة لمشاريعي وحساباتي بإذن الله 💪🏼💕"}, {"tag": "عن الكتاب", "text": "أسعد الله صباحك بكل خير رغد\nللتو انتهيت من قراءة كتابك الرقمي، شغل متعوب عليه صراحة والواضح انه نتاج تجربة طويييلة وماهو رؤوس أقلام\nكل شيء موضح، وكل ما قريت وطرى ببالي تساؤل احصلك بالسطر اللي بعده مجاوبه\nرغم اني للآن ما بدأت الا ان الصورة اتضحت بشكل كبير، كنت متحمسة وزاد حماسي أكثر، ما ندمت ابدًا اني شريته 🤍"}, {"tag": "عن الإلهام", "text": "تبشرين بالجنة\nأنا بديت بشغلي حاليًا كتابة محتوى، وقعد اشوف حساباتك وأتعلم منك\nوأحبك كأنك صاحبتي مره، تتكلمين معنا كأنك تعرفينا من دهر 🥹❤️"}, {"tag": "عن الأفكار", "text": "جهد تشكرين عليه، وماشاء الله افكارك ومحتواك ملفت للحساب حتى بشهادة اشخاص"}, {"tag": "عن التنفيذ", "text": "ممتازة، اعجبني سرعة التنفيذ وسهولة التواصل"}, {"tag": "عن العمل معي", "text": "يسعد مسائك\nأولاً إحنا سعيدين بك معنا ونتمنى انك تكونين سعيدة معنا بمرور الوقت، أنتِ موهوبة ولك رونق خاص ومكسب لأي منشأة وفريق بكل تأكيد"}, {"tag": "عن الفريق", "text": "ماشاء الله تبارك الله\nما ابطى السيل الا من كبره، وما تأخرتوا الا وعندكم شغل يبيض الوجه 👏🏼\nقواكم الله"}, {"tag": "عن التصوير", "text": "يعطيكم الف عافية\nشغل جمميل جدا ومرتب، من محتوى وتصوير وصوت، ماقصرتي 🙏🏼"}, {"tag": "عن العمل معي", "text": "فاجأتيني بالخبر رغد 🥹\nرغم إن فترة شغلي معك كانت قصيرة إلا ان أفكارك كانت أسطورية وجهدك مميز وفارق جدًا\nانبسطت بالشغل معك، والله يوفقك ويكتب لك النجاح في القادم 🤍"}, {"tag": "عن الملف", "text": "محظوظة اني ربحت فيه\nاقسم بالله هذا محتوى دورات بمبلغ وقدره، جمعتيها كلها في ملف\nجمعتي بساطة الشرح وغزارة المعلومات، ترا بسببه فعلت حساب الانستا، ولا زلت اقراه ترا لانه ملف دراسة مو ملف تقليب صفحات"}, {"tag": "عن الدليل", "text": "بعطيك رأيي في الدليل الشامل لإدارة الحسابات: بصراحة متكامل، فصلتي فيه كل شي، والحين فهمت شنو يعني مدير حسابات\nما شاء الله بصراحة انتي غطيتي جميع النقاط، حتى مواقع البرامج وملفات مرفقة لتقارير وتحليل منافسين والافكار التسويقية، كل شي انتي مرتبتنه ومسهله علينا من صفر\nحتى انا قعدت اكتب ملاحظات عشان ابي ابتدي يا في حسابي او حساب الشغل عندنا"}, {"tag": "تقييم ⭐⭐⭐⭐⭐", "text": "هذا الدليل الاكثر من رائع هو المفتاح لمشواركم في العمل بمجال ادارة الحسابات، لغة سهلة واسلوب ممتع ومعلومات مثرية، انصح فيه وبشده 💯"}, {"tag": "عن الملف", "text": "مرررة يجنن، عسى ربي يبارك فيه ويدعون لنا كل من استخدمه، يارب انك يسرتي وسهلتي علينا مهمة جدا مفيدة ونفعتينا فيها\nحببته بصراحة، تحمست أجمع شغلي ليناير وفبراير عليه"}, {"tag": "تقييم ⭐⭐⭐⭐⭐", "text": "التقرير يجنن ولا غلطه، ما ندمت اني طلبته، ومرتب من طلبته وانا اتأمله واتخيله شغلي 😂🤍"}, {"tag": "عن الإبداع", "text": "راااائع رائع! 🎇\nفعلًا إبداعية من الدرجة الأولى تبارك الله"}, {"tag": "عن الشخصية", "text": "إن شاء الله، رغد أتخيلك شيخ القبيلة ماشاء الله ❤️"}],
 
   contact: { email:"raghad.turki24@gmail.com", whatsapp:"https://wa.me/message/BJLJI75YRKDJC1", linkedin:"https://www.linkedin.com/in/raghad24r", x:"https://x.com/raghad_turki2" }
 };
@@ -1057,7 +1094,12 @@ tbtn.addEventListener("click", () => {
 
 /* الأرقام */
 $("#stats").innerHTML = RG.stats.map(([n,l]) => { const m = /^(\+?)(\d+)(\D*)$/.exec(n);
+  if (n === "spin") return `<div class="stat stat-spin"><b class="spin" aria-label="رقم ما وقف عدّه">+0.00M</b><span>${esc(l)}</span></div>`;
   return `<div class="stat"><b${m ? ` data-to="${m[2]}" data-pre="${m[1]}" data-suf="${esc(m[3])}"` : ` class="inf"`}>${m ? esc(m[1]) + "0" + esc(m[3]) : esc(n)}</b><span>${esc(l)}</span></div>`; }).join("");
+/* عدّاد ما يوقف: الرقم الفعلي محجوب، فالعدّ يستمر للأبد */
+function spinUp(el){ if (el.dataset.on) return; el.dataset.on = 1; let v = 0, last = 0;
+  const step = t => { if (t - last > 40) { last = t; v += 6000 + Math.random() * 9000; el.textContent = "+" + (v / 1e6).toFixed(2) + "M"; } requestAnimationFrame(step); };
+  requestAnimationFrame(step); }
 /* العدّ من الصفر إلى الرقم */
 function countUp(el, to, fmt, ms = 1300){
   const t0 = performance.now(), ease = x => 1 - Math.pow(1 - x, 3);
@@ -1070,6 +1112,7 @@ function onSeen(el, fn){
   io.observe(el);
 }
 onSeen($("#stats"), () => {
+  document.querySelectorAll("#stats .spin").forEach(spinUp);
   document.querySelectorAll("#stats b[data-to]").forEach(b => countUp(b, +b.dataset.to, v => b.dataset.pre + Math.round(v) + b.dataset.suf));
   const inf = $("#stats .inf"); if (inf) inf.classList.add("pop");
 });
@@ -1176,7 +1219,7 @@ function campCard(c){
       <small>${c.sealed ? esc(c.hint) : esc(c.period)}</small></div>
       ${c.sealed ? `<span class="lock-tag"><span class="blk" style="width:14px;height:7px"></span>محجوبة</span>` : ""}</div>
     ${c.desc ? `<p class="camp-d">${esc(c.desc)}</p>` : ""}
-    <div class="big-num"><b>${kfmt(c.big)}</b><span>${esc(c.bigLabel)}</span></div>
+    <div class="big-num"><b class="${c.big === "spin" ? "spin" : ""}">${c.big === "spin" ? "+0.00M" : kfmt(c.big)}</b><span>${esc(c.bigLabel)}</span></div>
     ${c.metrics.length > 1 ? `<div class="camp-m">${c.metrics.map(([k,v]) => `<div><b>${fmt(v)}</b><span>${esc(k)}</span></div>`).join("")}</div>` : ""}
     <div class="sc-role"><b>دوري في الحملة</b><ul>${c.roles.map(r => `<li>${esc(r)}</li>`).join("")}</ul></div>
     ${c.clips ? `<div class="camp-clips"><b>من مقاطع الحملة</b><div class="reel-grid">${c.clips.map((r,i) => reelCard(r,i)).join("")}</div></div>` : ""}
@@ -1184,6 +1227,14 @@ function campCard(c){
   </article>`;
 }
 function reportCard(r){
+  if (r.locked) return `<article class="rep is-locked">
+    <div class="rep-cover" aria-label="${esc(r.title)} مغلق">
+      <img src="${esc(r.pages[0])}" alt="" loading="lazy" draggable="false">
+      <span class="rep-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+    </div>
+    <div class="rep-b"><span class="rep-c">${esc(r.client)}</span><h4>${esc(r.title)}</h4><p>${esc(r.desc)}</p>
+      <span class="rep-closed">التقرير مغلق احترامًا لخصوصية العميل</span></div>
+  </article>`;
   return `<article class="rep">
     <button class="rep-cover${r.tall ? " is-tall" : ""}" type="button" data-pages="${esc(JSON.stringify(r.pages))}" data-title="${esc(r.title)}" aria-label="تصفح ${esc(r.title)}">
       <img src="${esc(r.pages[0])}" alt="غلاف ${esc(r.title)}" loading="lazy">
@@ -1284,7 +1335,7 @@ $("#folders").addEventListener("click", e => {
     setTimeout(wireLi, 0);
     const wire = () => { setTimeout(() => eqCards(body), 0); body.querySelectorAll("img").forEach(im => { if (!im.complete) im.addEventListener("load", () => eqCards(body), { once:true }); }); setTimeout(wireLi, 0); body.querySelectorAll(".ig-more").forEach(m => m.onclick = () => {
       const c = m.closest(".ig-cap"), open = c.classList.toggle("open"); m.textContent = open ? "إخفاء" : "المزيد"; m.setAttribute("aria-expanded", open); }); };
-    wire();
+    wire(); body.querySelectorAll(".spin").forEach(spinUp);
     body.querySelectorAll(".gtab").forEach(b => b.onclick = () => {
       body.querySelectorAll(".gtab").forEach(x => x.setAttribute("aria-selected", x === b));
       body.querySelector(".grp").innerHTML = grid(b.dataset.g); wire(); });
@@ -1309,16 +1360,16 @@ const KIC = { like:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
 $("#resGrid").innerHTML = `
   <div class="res-board">
     <p class="rb-lede">${esc(R.text)}</p>
-    <div class="rb-hero"><b class="kn" data-v="${R.total}">+0</b><span>${esc(R.totalLabel)}</span>
-      <div class="rb-split" aria-hidden="true">${R.kpis.slice(0,2).map(k => `<i class="pi-${k.plat}" style="--w:${(k.v / R.total * 100).toFixed(1)}%"></i>`).join("")}</div>
+    <div class="rb-hero"><span class="rb-k">المشاهدات</span><b class="kn${R.total === "spin" ? " spin" : ""}" data-v="${R.total}">+0</b><span>${esc(R.totalLabel)}</span>
+      <div class="rb-split" aria-hidden="true">${R.kpis.slice(0,2).map(k => `<i class="pi-${k.plat}" style="--w:${k.v === "spin" ? 88 : 12}%"></i>`).join("")}</div>
       <div class="rb-legend">${R.kpis.slice(0,2).map(k => `<span><i class="dot pi-${k.plat}"></i>${esc(k.sub)}</span>`).join("")}</div>
     </div>
     <div class="rb-kpis">${R.kpis.map(k => `<div class="kpi">
       <span class="pi ${k.plat ? `pi-${k.plat}` : "pi-soft"}" aria-hidden="true">${k.plat ? PLAT_IC[k.plat] : KIC[k.icon]}</span>
-      <b class="kn" data-v="${k.v}">+0</b><span class="kl">${esc(k.label)}</span><small>${esc(k.sub)}</small></div>`).join("")}</div>
-    <p class="note">المشاهدات مجموع مرات المشاهدة، وليست عدد أشخاص مختلفين</p>
+      <b class="kn${k.v === "spin" ? " spin" : ""}" data-v="${k.v}">+0</b><span class="kl">${esc(k.label)}</span><small>${esc(k.sub)}</small></div>`).join("")}</div>
+    <p class="note">الرقم يتجاوز حدود الإفصاح</p>
   </div>`;
-onSeen($("#resGrid"), () => document.querySelectorAll("#resGrid .kn").forEach(b => countUp(b, +b.dataset.v, kfmt, 1500)));
+onSeen($("#resGrid"), () => document.querySelectorAll("#resGrid .kn").forEach(b => b.classList.contains("spin") ? spinUp(b) : countUp(b, +b.dataset.v, kfmt, 1500)));
 
 
 /* أعمال محظورة: رسم مولّد بالكامل، ما فيه أي محتوى أصلي مخفي */
@@ -1375,6 +1426,16 @@ $("#vault").addEventListener("click", e => {
 });
 $("#sheetClose").addEventListener("click", () => sheet.close());
 sheet.addEventListener("click", e => { if (e.target === sheet) sheet.close(); });
+
+/* وللحكاية شهود */
+$("#witGrid").innerHTML = RG.witnesses.map(w => `<figure class="wit"><span class="wit-q" aria-hidden="true">”</span><span class="wit-tag">${esc(w.tag)}</span>
+  <blockquote class="wit-t" style="margin:0">${w.text.split("\n").map(l => `<p>${esc(l).split("{{BLUR}}").join('<span class="wit-blur" aria-label="محجوب"></span>')}</p>`).join("")}</blockquote>
+  <button class="wit-more" type="button" hidden>…المزيد</button></figure>`).join("");
+const wireWit = () => document.querySelectorAll(".wit").forEach(c => { const t = c.querySelector(".wit-t"), b = c.querySelector(".wit-more");
+  if (c.classList.contains("open")) return; b.hidden = t.scrollHeight <= t.clientHeight + 2;
+  b.onclick = () => { const o = c.classList.toggle("open"); b.textContent = o ? "عرض أقل" : "…المزيد"; }; });
+setTimeout(wireWit, 0);
+$("#witAll").onclick = e => { const g = $("#witGrid"), o = g.classList.toggle("all"); e.currentTarget.textContent = o ? "عرض أقل" : "شهادات أكثر"; wireWit(); if (!o) $("#witnesses").scrollIntoView({ block:"start" }); }; (document.fonts ? document.fonts.ready : Promise.resolve()).then(wireWit); addEventListener("resize", wireWit);
 
 /* التواصل */
 const toast = m => { const t = $("#toast"); t.textContent = m; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 1800); };
@@ -1528,7 +1589,7 @@ document.addEventListener("play", e => { if (e.target.tagName === "VIDEO") docum
     $("#vwThumbs").querySelectorAll("button").forEach((b, j) => b.setAttribute("aria-current", j === k));
     const nx = new Image(); nx.src = pages[(k + 1) % pages.length]; };
   document.addEventListener("click", e => {
-    const b = e.target.closest(".rep-cover, .rep-open"); if (!b) return;
+    const b = e.target.closest(".rep-cover, .rep-open"); if (!b || b.closest(".is-locked")) return;
     const c = b.closest(".rep").querySelector(".rep-cover");
     pages = JSON.parse(c.dataset.pages); $("#vwTitle").textContent = c.dataset.title; last = b;
     $("#vwThumbs").innerHTML = pages.map((p, j) => `<button aria-label="صفحة ${j + 1}"><img src="${p}" alt="" loading="lazy"></button>`).join("");
