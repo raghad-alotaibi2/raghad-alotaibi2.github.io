@@ -249,13 +249,13 @@ section{scroll-margin-top:110px;padding-block:var(--sec) 0}
 
 /* ---------- وللحكاية شهود ---------- */
 .wit-sec{padding-block:var(--sec) 0;text-align:center}
-.wit-grid{display:flex;gap:14px;align-items:stretch;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 4px 14px;margin-top:var(--head-gap);text-align:start;scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--accent) 35%,transparent) transparent;-webkit-overflow-scrolling:touch}
+.wit-grid{display:flex;gap:14px;align-items:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 4px 14px;margin-top:var(--head-gap);text-align:start;scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--accent) 35%,transparent) transparent;-webkit-overflow-scrolling:touch}
 .wit-grid .wit{flex:0 0 270px;scroll-snap-align:start;padding:14px 14px 12px;gap:8px;border-radius:16px}
 .wit-grid .wit-q{font-size:2.4rem;top:6px}
 .wit-grid .wit p{font-size:.86rem;line-height:1.8}
 .wit-grid .wit-t{gap:6px}
 .wit-grid .wit-t p{padding:6px 10px}
-.wit-grid .wit:not(.open) .wit-t{-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
+.wit-grid .wit.clip:not(.open) .wit-t{-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
 .wit-grid .wit-t{max-height:150px;overflow:hidden;align-content:start}
 .wit-grid .wit{grid-template-rows:auto 1fr auto}
 .wit-nav{display:flex;justify-content:center;gap:12px;margin-top:8px}
@@ -1439,11 +1439,12 @@ $("#sheetClose").addEventListener("click", () => sheet.close());
 sheet.addEventListener("click", e => { if (e.target === sheet) sheet.close(); });
 
 /* وللحكاية شهود */
-$("#witGrid").innerHTML = RG.witnesses.map(w => `<figure class="wit"><span class="wit-q" aria-hidden="true">”</span><span class="wit-tag">${esc(w.tag)}</span>
+const witSize = w => w.text.length + 45 * w.text.split("\n").length;
+$("#witGrid").innerHTML = [...RG.witnesses].sort((a, b) => witSize(a) - witSize(b)).map(w => `<figure class="wit"><span class="wit-q" aria-hidden="true">”</span><span class="wit-tag">${esc(w.tag)}</span>
   <blockquote class="wit-t" style="margin:0">${w.text.split("\n").map(l => `<p>${esc(l).split("{{BLUR}}").join('<span class="wit-blur" aria-label="محجوب"></span>')}</p>`).join("")}</blockquote>
   <button class="wit-more" type="button" hidden>…المزيد</button></figure>`).join("");
 const wireWit = () => document.querySelectorAll(".wit").forEach(c => { const t = c.querySelector(".wit-t"), b = c.querySelector(".wit-more");
-  if (c.classList.contains("open")) return; b.hidden = t.scrollHeight <= t.clientHeight + 2;
+  if (c.classList.contains("open")) return; b.hidden = t.scrollHeight <= t.clientHeight + 2; c.classList.toggle("clip", !b.hidden);
   b.onclick = () => { const o = c.classList.toggle("open"); b.textContent = o ? "عرض أقل" : "…المزيد"; }; });
 setTimeout(wireWit, 0);
 { const g = $("#witGrid"), pv = $("#witPrev"), nx = $("#witNext");
