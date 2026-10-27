@@ -249,10 +249,11 @@ section{scroll-margin-top:110px;padding-block:var(--sec) 0}
 
 /* ---------- وللحكاية شهود ---------- */
 .wit-sec{padding-block:var(--sec) 0;text-align:center}
-.wit-grid{columns:3 280px;column-gap:18px;margin-top:var(--head-gap);text-align:start}
-.wit{break-inside:avoid;margin:0 0 18px;background:var(--card);border-radius:18px;box-shadow:var(--shadow);padding:20px 20px 16px;position:relative;display:grid;gap:10px;border:1px solid var(--line)}
-.wit:nth-child(3n+2){background:color-mix(in srgb,var(--lilac) 22%,var(--card))}
-.wit:nth-child(3n){background:color-mix(in srgb,var(--orange) 12%,var(--card))}
+.wit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch;margin-top:var(--head-gap);text-align:start}
+@media (max-width:980px){.wit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.wit{margin:0;align-content:start;background:var(--card);border-radius:18px;box-shadow:var(--shadow);padding:20px 20px 16px;position:relative;display:grid;gap:10px;border:1px solid var(--line)}
+.wit:is(:nth-child(6n+2),:nth-child(6n+6)){background:color-mix(in srgb,var(--lilac) 22%,var(--card))}
+.wit:is(:nth-child(6n+3),:nth-child(6n+4)){background:color-mix(in srgb,var(--orange) 12%,var(--card))}
 .wit-q{position:absolute;top:10px;inset-inline-end:16px;font-size:3.2rem;line-height:1;color:var(--accent);opacity:.18;font-family:Georgia,serif}
 .wit-grid:not(.all) .wit:nth-child(n+10){display:none}
 .wit-all{margin-top:6px;border:1px solid var(--line);background:var(--card);color:var(--accent);font:inherit;font-weight:600;border-radius:999px;padding:9px 22px;cursor:pointer;box-shadow:var(--shadow)}
@@ -1428,7 +1429,8 @@ $("#sheetClose").addEventListener("click", () => sheet.close());
 sheet.addEventListener("click", e => { if (e.target === sheet) sheet.close(); });
 
 /* وللحكاية شهود */
-$("#witGrid").innerHTML = RG.witnesses.map(w => `<figure class="wit"><span class="wit-q" aria-hidden="true">”</span><span class="wit-tag">${esc(w.tag)}</span>
+const witSize = w => w.text.length + 45 * w.text.split("\n").length;
+$("#witGrid").innerHTML = [...RG.witnesses].sort((a, b) => witSize(b) - witSize(a)).map(w => `<figure class="wit"><span class="wit-q" aria-hidden="true">”</span><span class="wit-tag">${esc(w.tag)}</span>
   <blockquote class="wit-t" style="margin:0">${w.text.split("\n").map(l => `<p>${esc(l).split("{{BLUR}}").join('<span class="wit-blur" aria-label="محجوب"></span>')}</p>`).join("")}</blockquote>
   <button class="wit-more" type="button" hidden>…المزيد</button></figure>`).join("");
 const wireWit = () => document.querySelectorAll(".wit").forEach(c => { const t = c.querySelector(".wit-t"), b = c.querySelector(".wit-more");
