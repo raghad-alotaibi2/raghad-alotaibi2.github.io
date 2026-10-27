@@ -247,7 +247,7 @@ section{scroll-margin-top:110px;padding-block:var(--sec) 0}
 .kpi .kl{font-size:.88rem}.kpi small{font-size:.72rem;color:var(--mute)}
 @media(max-width:700px){.rb-kpis{grid-template-columns:1fr 1fr;gap:10px}}
 
-/* ---------- وللحكاية شهود ---------- */
+/* ---------- للإنجازات شهود ---------- */
 .wit-sec{padding-block:var(--sec) 0;text-align:center}
 .wit-grid{display:flex;gap:14px;align-items:stretch;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 4px 14px;margin-top:var(--head-gap);text-align:start;scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--accent) 35%,transparent) transparent;-webkit-overflow-scrolling:touch}
 .wit-grid .wit{flex:0 0 270px;scroll-snap-align:start;padding:14px 14px 12px;gap:8px;border-radius:16px}
@@ -814,10 +814,10 @@ main section,.vault-body{text-align:center}
   </div>
 </section>
 
-<!-- وللحكاية شهود -->
+<!-- للإنجازات شهود -->
 <section class="wit-sec" id="witnesses" aria-labelledby="witTitle">
   <div class="wrap">
-    <h2 class="h2" id="witTitle">وللحكاية شهود</h2>
+    <h2 class="h2" id="witTitle">للإنجازات شهود</h2>
   </div>
   <div class="wrap wit-grid" id="witGrid"></div>
   <div class="wrap wit-nav"><button id="witPrev" type="button" aria-label="الشهادة السابقة">→</button><button id="witNext" type="button" aria-label="الشهادة التالية">←</button></div>
@@ -1044,7 +1044,7 @@ const RG = {
       why:"غير مصرّح بالنشر" }
   ],
 
-  // وللحكاية شهود: آراء من عملاء ومتابعين ({{BLUR}} = جزء مشوّش، النص الأصلي ما ينكتب)
+  // للإنجازات شهود: آراء من عملاء ومتابعين ({{BLUR}} = جزء مشوّش، النص الأصلي ما ينكتب)
   witnesses: [{"tag": "عن الملف", "text": "والله أبهرتيني ومبسوطه لك\nعند كل صفحة أقول ماشاء الله عليها، صدق محتوى يبرد الخاطر.. دليل شامل قول وفعل ❤️‍🔥\nالله يوفقك ويرزقك الخير الوفير وأنتِ بصحة وعافية، وشكرًا لأنه من أمتع وأنفع الهدايا والله ماقصرتي 🥹❤️"}, {"tag": "عن التعامل", "text": "يعطيك العافية ما قصرتي، شغل جميل ومرتب وتعامل راقي وخدمة عملاء فنانه\nشكراً لك ولفريقك المبدع، الله يبارك لك في رزقك ويرزقك من واسع فضله وتوصلي وتحققي جميع أهدافك 🌼🤝\nوأكيد ماراح يكون أخر تعامل بيننا 🌼"}, {"tag": "عن التصوير", "text": "حياك الله رغد، جودة التصوير وشغل الفيديوهات ممتازه جدا، بالإضافة لجودة الـ voiceover\nالتعامل معكم مريح من ناحية التعديلات، كل الشكر لك ولفريقك"}, {"tag": "عن الكتاب", "text": "قرأت الكتاب من أول يوم ما يقارب ثلاث مرات، لغزارة المعرفة فيه والمعلومات الأساسية التي يمكن أن ينتهجها من يبدأ في إدارة الحسابات، والتسويق الرقمي أيضًا\nكانت اللغة ودية وسهلة حتى شعرت (أننا على الدكة نشرب شاي سوا)، والأجمل تنسيقك للمعلومة بالترتيب حتى يصل القارئ لغايته ومقصده الأول\nلن تفي الكلمات مدى الحب والإعجاب بكِ ولكِ على الكتاب وأمانتك في الطرح والتقديم، بوركتِ يا رغد ❤️"}, {"tag": "عن الأسلوب", "text": "والله اني أعرف إنك ماتحطين الا الجميل النادر\nمو لأني عرفتك هنا، انا متابعتك من قبل التحدي ذا، حتى تغريداتك عن المواضيع وافيه وكافيه دايم\nأسلوبك مختلف وطريقة تفكيرك نادره تبارك الرحمن، وسبق وأشدت بك عند صحباتي أن شوفوا حساب رغد، حتى الملفات اللي تسويها تفتح النفس وتحمس اللي يشوفها ماهي مملة ومتزاحمه"}, {"tag": "عن المحتوى", "text": "والمحتوى دايما اعلاناتك جميلة بسبب المحتوى اللي تجهزيه لنا 🙏🏼"}, {"tag": "عن الملف", "text": "اهلا رغد مساء الخير 🤍\nانا توني شريت الملف حق بكج إدارة الحسابات، مشاءالله تبارك الله الملف متكامل ورائع 👍🏻"}, {"tag": "عن التسويق", "text": "فيه وحده تصور وتسوق لمنتجات {{BLUR}} ومدحتك عندها، قلت شاطره مره بالتسويق والتعامل مع المشاهير\nوحابه تتواصل معك"}, {"tag": "عن المنتج", "text": "اهلاً رغد\nحبيت اقولك الف شكر والله للمنتج الرهيب اللي فك لي ازمة الحوسه ومعلومات تلخبط الواحد ❤️❤️❤️\nشكراً لمجهودك"}, {"tag": "عن الملف", "text": "يجنننننن الملفففف يفتحح النفسسس\nالله يعطيييك العافييية يارب، ما ندمت اني شريته ابدا 🤍🤍🤍"}, {"tag": "عن التصميم", "text": "الجوكّر وين ما تكونين تبدعيييين ❤️\nماشاءالله والله رهيب التصميم، وحسيت في لمسه حنونه يمكن من الجلسه الحمراء 😂"}, {"tag": "عن الإلهام", "text": "قسم بالله الفخر 💜\nتطورك يوم عن يوم وانجازاتك مُبهرره، انتي فوق م انك تعطين بحُب وتصنعين اشياء تفيد الناس وبشكل احترافي، ياخي مُلهمه\nتلهمين غيرك انه يبدا، انه يحاول، وتلهمينه انه صدق مافيه شي مستحيل 🥹\nالله يسعدك ويوفقك ويجعل كل خطوه تخطينها بالمجال هذا وغيره بركه وتوفيق لك، وعقبال م نشوف اسمك باعلى الاماكن اللي تتمنينها 💜"}, {"tag": "عن الملف", "text": "حبيت حبيت مرة، شكرًا والله الجهد المبذول واضح وعصارة الخبرة بارزة لدرجة لو كان هذا الملف موجود ببداياتي لاختصر علي كثير اخطاء وخلاني اركز أكثر في أهدافي وحقق نتايج أفضل بدون تشتيت\nاحلا شيء فيه أنه مركز بنقاط رئيسية نغفل عنها كثير مع حوسة إدارة الحسابات، حاليًا اقدر اقول راجعه بقوة لمشاريعي وحساباتي بإذن الله 💪🏼💕"}, {"tag": "عن الكتاب", "text": "أسعد الله صباحك بكل خير رغد\nللتو انتهيت من قراءة كتابك الرقمي، شغل متعوب عليه صراحة والواضح انه نتاج تجربة طويييلة وماهو رؤوس أقلام\nكل شيء موضح، وكل ما قريت وطرى ببالي تساؤل احصلك بالسطر اللي بعده مجاوبه\nرغم اني للآن ما بدأت الا ان الصورة اتضحت بشكل كبير، كنت متحمسة وزاد حماسي أكثر، ما ندمت ابدًا اني شريته 🤍"}, {"tag": "عن الإلهام", "text": "تبشرين بالجنة\nأنا بديت بشغلي حاليًا كتابة محتوى، وقعد اشوف حساباتك وأتعلم منك\nوأحبك كأنك صاحبتي مره، تتكلمين معنا كأنك تعرفينا من دهر 🥹❤️"}, {"tag": "عن الأفكار", "text": "جهد تشكرين عليه، وماشاء الله افكارك ومحتواك ملفت للحساب حتى بشهادة اشخاص"}, {"tag": "عن التنفيذ", "text": "ممتازة، اعجبني سرعة التنفيذ وسهولة التواصل"}, {"tag": "عن العمل معي", "text": "يسعد مسائك\nأولاً إحنا سعيدين بك معنا ونتمنى انك تكونين سعيدة معنا بمرور الوقت، أنتِ موهوبة ولك رونق خاص ومكسب لأي منشأة وفريق بكل تأكيد"}, {"tag": "عن الفريق", "text": "ماشاء الله تبارك الله\nما ابطى السيل الا من كبره، وما تأخرتوا الا وعندكم شغل يبيض الوجه 👏🏼\nقواكم الله"}, {"tag": "عن التصوير", "text": "يعطيكم الف عافية\nشغل جمميل جدا ومرتب، من محتوى وتصوير وصوت، ماقصرتي 🙏🏼"}, {"tag": "عن العمل معي", "text": "فاجأتيني بالخبر رغد 🥹\nرغم إن فترة شغلي معك كانت قصيرة إلا ان أفكارك كانت أسطورية وجهدك مميز وفارق جدًا\nانبسطت بالشغل معك، والله يوفقك ويكتب لك النجاح في القادم 🤍"}, {"tag": "عن الملف", "text": "محظوظة اني ربحت فيه\nاقسم بالله هذا محتوى دورات بمبلغ وقدره، جمعتيها كلها في ملف\nجمعتي بساطة الشرح وغزارة المعلومات، ترا بسببه فعلت حساب الانستا، ولا زلت اقراه ترا لانه ملف دراسة مو ملف تقليب صفحات"}, {"tag": "عن الدليل", "text": "بعطيك رأيي في الدليل الشامل لإدارة الحسابات: بصراحة متكامل، فصلتي فيه كل شي، والحين فهمت شنو يعني مدير حسابات\nما شاء الله بصراحة انتي غطيتي جميع النقاط، حتى مواقع البرامج وملفات مرفقة لتقارير وتحليل منافسين والافكار التسويقية، كل شي انتي مرتبتنه ومسهله علينا من صفر\nحتى انا قعدت اكتب ملاحظات عشان ابي ابتدي يا في حسابي او حساب الشغل عندنا"}, {"tag": "تقييم ⭐⭐⭐⭐⭐", "text": "هذا الدليل الاكثر من رائع هو المفتاح لمشواركم في العمل بمجال ادارة الحسابات، لغة سهلة واسلوب ممتع ومعلومات مثرية، انصح فيه وبشده 💯"}, {"tag": "عن الملف", "text": "مرررة يجنن، عسى ربي يبارك فيه ويدعون لنا كل من استخدمه، يارب انك يسرتي وسهلتي علينا مهمة جدا مفيدة ونفعتينا فيها\nحببته بصراحة، تحمست أجمع شغلي ليناير وفبراير عليه"}, {"tag": "تقييم ⭐⭐⭐⭐⭐", "text": "التقرير يجنن ولا غلطه، ما ندمت اني طلبته، ومرتب من طلبته وانا اتأمله واتخيله شغلي 😂🤍"}, {"tag": "عن الإبداع", "text": "راااائع رائع! 🎇\nفعلًا إبداعية من الدرجة الأولى تبارك الله"}, {"tag": "عن الشخصية", "text": "إن شاء الله، رغد أتخيلك شيخ القبيلة ماشاء الله ❤️"}],
 
   contact: { email:"raghad.turki24@gmail.com", whatsapp:"https://wa.me/message/BJLJI75YRKDJC1", linkedin:"https://www.linkedin.com/in/raghad24r", x:"https://x.com/raghad_turki2" }
@@ -1438,20 +1438,26 @@ $("#vault").addEventListener("click", e => {
 $("#sheetClose").addEventListener("click", () => sheet.close());
 sheet.addEventListener("click", e => { if (e.target === sheet) sheet.close(); });
 
-/* وللحكاية شهود */
-const witSize = w => w.text.length + 45 * w.text.split("\n").length;
-$("#witGrid").innerHTML = [...RG.witnesses].sort((a, b) => witSize(a) - witSize(b)).map(w => `<figure class="wit"><span class="wit-q" aria-hidden="true">”</span><span class="wit-tag">${esc(w.tag)}</span>
+/* للإنجازات شهود */
+$("#witGrid").innerHTML = RG.witnesses.map(w => `<figure class="wit"><span class="wit-q" aria-hidden="true">”</span><span class="wit-tag">${esc(w.tag)}</span>
   <blockquote class="wit-t" style="margin:0">${w.text.split("\n").map(l => `<p>${esc(l).split("{{BLUR}}").join('<span class="wit-blur" aria-label="محجوب"></span>')}</p>`).join("")}</blockquote>
   <button class="wit-more" type="button" hidden>…المزيد</button></figure>`).join("");
 const wireWit = () => document.querySelectorAll(".wit").forEach(c => { const t = c.querySelector(".wit-t"), b = c.querySelector(".wit-more");
   if (c.classList.contains("open")) return; b.hidden = t.scrollHeight <= t.clientHeight + 2; c.classList.toggle("clip", !b.hidden);
   b.onclick = () => { const o = c.classList.toggle("open"); b.textContent = o ? "عرض أقل" : "…المزيد"; }; });
+/* الترتيب: التعليقات اللي تكمل داخل المربع أول (أطولها ثم أقصرها بالتناوب)، وبعدها الطويلة من الأقصر للأطول */
+const orderWit = () => { const g = $("#witGrid"), cs = [...g.children];
+  const fit = [], long = [];
+  cs.forEach(c => { const t = c.querySelector(".wit-t"); (t.scrollHeight <= t.clientHeight + 2 ? fit : long).push([t.innerText.length, c]); });
+  fit.sort((a, b) => b[0] - a[0]); long.sort((a, b) => a[0] - b[0]);
+  const mix = []; for (let i = 0, j = fit.length - 1; i <= j; i++, j--) { mix.push(fit[i]); if (i !== j) mix.push(fit[j]); }
+  [...mix, ...long].forEach(([, c]) => g.appendChild(c)); g.scrollLeft = 0; };
 setTimeout(wireWit, 0);
 { const g = $("#witGrid"), pv = $("#witPrev"), nx = $("#witNext");
   const step = () => (g.querySelector(".wit")?.offsetWidth || 270) + 14;
   const upd = () => { const m = g.scrollWidth - g.clientWidth, x = Math.abs(g.scrollLeft); pv.disabled = x < 10; nx.disabled = x > m - 10; };
   nx.onclick = () => g.scrollBy({ left: -step() }); pv.onclick = () => g.scrollBy({ left: step() });
-  g.addEventListener("scroll", upd, { passive:true }); addEventListener("resize", upd); setTimeout(upd, 0); } (document.fonts ? document.fonts.ready : Promise.resolve()).then(wireWit); addEventListener("resize", wireWit);
+  g.addEventListener("scroll", upd, { passive:true }); addEventListener("resize", upd); setTimeout(upd, 0); } (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => { orderWit(); wireWit(); }); addEventListener("resize", wireWit);
 
 /* التواصل */
 const toast = m => { const t = $("#toast"); t.textContent = m; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 1800); };
