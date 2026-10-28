@@ -503,7 +503,6 @@ main section,.vault-body{text-align:center}
 @keyframes pulse{50%{opacity:.4}}
 .reel-v figcaption{display:grid;gap:2px;font-size:.84rem;line-height:1.5}
 .reel-v figcaption b{font-weight:700}
-.rv-views{font-size:.78rem;opacity:.8}
 .reel-v figcaption a{color:var(--accent);font-size:.78rem;text-decoration:none}
 .reel-v figcaption a:hover{text-decoration:underline}
 
@@ -996,16 +995,7 @@ const RG = {
           big:"spin", bigLabel:"مشاهدة",
           metrics:[],
           roles:["اختيار المؤثرين المناسبين والتنسيق معهم","اختيار المنتجات المناسبة لكل مؤثر","الفكرة وكتابة المحتوى الإعلاني","متابعة النشر والنتائج"],
-          note:"الرقم يتجاوز حدود الإفصاح",
-          clips:[
-{kind:"reel", video:"videos-c01.mp4", poster:"videos-cp01.jpg", title:"مقطع من الحملة 1"},
-{kind:"reel", video:"videos-c02.mp4", poster:"videos-cp02.jpg", title:"مقطع من الحملة 2"},
-{kind:"reel", video:"videos-c03.mp4", poster:"videos-cp03.jpg", title:"مقطع من الحملة 3"},
-{kind:"reel", video:"videos-c04.mp4", poster:"videos-cp04.jpg", title:"مقطع من الحملة 4"},
-{kind:"reel", video:"videos-c05.mp4", poster:"videos-cp05.jpg", title:"مقطع من الحملة 5"},
-{kind:"reel", video:"videos-c06.mp4", poster:"videos-cp06.jpg", title:"مقطع من الحملة 6"},
-{kind:"reel", video:"videos-c07.mp4", poster:"videos-cp07.jpg", title:"مقطع من الحملة 7"}
-          ] }],
+          note:"الرقم يتجاوز حدود الإفصاح" }],
         "إكس":[{ kind:"camp", plat:"x", sealed:true, title:"حملة حلقات بودكاست", hint:"إكس · اسم البودكاست محجوب", desc:"حملة تسويقية لبودكاست معروف، شملت اختيار المؤثرين المناسبين، وابتكار الفكرة الإعلانية، وكتابة المحتوى، ومتابعة النشر لضمان تنفيذ الحملة وفق الأهداف المحددة",
           big:4000000, bigLabel:"وصول",
           metrics:[["الوصول",4000000]],
@@ -1299,7 +1289,7 @@ function reelCard(r, i){
       <video data-src="${esc(r.video)}" poster="${esc(r.poster)}" preload="none" playsinline webkit-playsinline controlslist="nodownload" aria-label="${esc(r.title)}"></video>
       <button class="rv-play" type="button" aria-label="تشغيل: ${esc(r.title)}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7Z" fill="currentColor"/></svg></button>
     </div>
-    <figcaption><b>${esc(r.title)}</b>${r.views ? `<span class="rv-views">👁 ${esc(r.views)} مشاهدة</span>` : ""}${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">شاهد على إنستقرام ↗</a>` : ""}</figcaption>
+    <figcaption><b>${esc(r.title)}</b>${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">شاهد على إنستقرام ↗</a>` : ""}</figcaption>
   </figure>`;
 }
 function tweetCard(t){
